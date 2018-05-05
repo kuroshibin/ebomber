@@ -9,6 +9,7 @@ import os
 import smtplib
 import getpass
 import sys
+import random
 
 
 server = raw_input ('MailServer Gmail/Yahoo: ')
@@ -19,6 +20,7 @@ passwd = getpass.getpass('Password: ')
 to = raw_input('\nTo: ')
 #subject = raw_input('Subject: ') 
 body = raw_input('Message: ')
+bodyMessage = str(random.randint(0,999999999999999)).zfill(15)
 total = input('Number of send: ')
 
 if server == 'gmail':
